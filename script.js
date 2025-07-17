@@ -244,7 +244,7 @@ const inventory = [];
 
     })
 
-let altCart = shoppingCart
+    let altCart;
 
 myInnerShelf.addEventListener('click', () => {
     
@@ -252,7 +252,7 @@ myInnerShelf.addEventListener('click', () => {
     removeIt.forEach(btn => {
         btn.addEventListener('click', () => {
             
-            altCart = altCart.filter(item => item.id != btn.id);
+            altCart = shoppingCart.filter(item => item.id != btn.id);
             console.log(altCart);
 
             myInnerShelf.innerHTML = ``;
